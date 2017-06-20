@@ -1,0 +1,35 @@
+apply plugin: 'groovy'
+apply plugin: 'maven'
+apply from: '../bintray.gradle'
+
+dependencies {
+    //gradle sdk
+    compile gradleApi()
+    //groovy sdk
+    compile localGroovy()
+    compile 'com.android.tools.build:gradle:2.3.3'
+    compile 'org.aspectj:aspectjtools:1.8.9'
+}
+
+repositories {
+    mavenCentral()
+}
+//group和version在后面使用自定义插件的时候会用到
+//group = 'com.plugin.aop'
+//version = '1.0.0'
+
+//uploadArchives {
+//    repositories {
+//        mavenDeployer {
+//            //提交到远程服务器：
+//            repository(url: "https://bintray.com/mickeyzhoumiqi/maven_zmq") {
+//                authentication(userName: "mickeyzhoumiqi", password: "mickey190805")
+//            }
+//            pom.groupId = 'com.plugin.aop'
+//            pom.artifactId = 'aspectj'
+//            pom.version = '1.0.0'
+//            //本地的Maven地址设置为D:/repos
+////            repository(url: uri('D:/repos'))
+//        }
+//    }
+//}
