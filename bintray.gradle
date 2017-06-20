@@ -15,9 +15,12 @@ def inception = '2017'
 
 def username = 'zhoumiqi'
 
-version="1.0.0"
+version = "1.0.0"
 
-group="com.plugin.aop"
+group = "com.plugin.aop"
+
+//.更新版本执行 gradlew install , gradlew bintrayUpload
+
 
 install {
     repositories {
@@ -73,7 +76,6 @@ artifacts {
     archives javadocJar
     archives sourcesJar
 }
-
 
 //配置bintray参数
 Properties properties = new Properties()
