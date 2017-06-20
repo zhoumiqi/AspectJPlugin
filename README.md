@@ -3,13 +3,19 @@
 1、在项目的build.gradle中添加classpath
 
 buildscript {
+
      ……
+     
       dependencies {
+      
           ……
+          
           //自定义aspectj插件
           
           classpath 'com.plugin.aop:aspectj:1.0.0'
+          
       }
+      
   }
 
 2、在所有需要用到插件相关类的Module中都引入插件
