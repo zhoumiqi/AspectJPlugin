@@ -19,7 +19,8 @@ version = "1.0.0"
 
 group = "com.plugin.aop"
 
-//.更新版本执行 gradlew install , gradlew bintrayUpload
+//.参考：http://blog.csdn.net/sbsujjbcy/article/details/50782830/
+// 更新版本执行 gradlew install , gradlew bintrayUpload
 
 
 install {
