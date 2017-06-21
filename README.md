@@ -12,7 +12,7 @@ buildscript {
           
           //自定义aspectj插件
           
-          classpath 'com.plugin.aop:aspectj:1.0.0'
+          classpath 'com.zmq.plugin:aspectj:1.0.0'
           
       }
       
@@ -24,5 +24,12 @@ buildscript {
 
 //添加支持AspectJ插件
 
-apply plugin: 'com.plugin.aop.aspectj'
+apply plugin: 'com.zmq.plugin.aspectj'
 
+注意：使用自定义插件aspectj时，暂时不能在library中使用lambda表达式(可能AS更新会支持)，
+
+否则会在安装APK时生成一堆ajcore.XXX.XXX.XXX.txt的文件，
+
+Gradle Console会输出报错信息，AOP切片使用也会报错，提示
+
+No static method of aspectOf()……

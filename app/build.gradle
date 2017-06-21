@@ -1,5 +1,5 @@
 apply plugin: 'com.android.application'
-apply plugin: 'com.plugin.aop.aspectj'
+apply plugin: 'com.zmq.plugin.aspectj'
 
 android {
     compileSdkVersion 25

@@ -3,10 +3,13 @@
 buildscript {
     repositories {
         jcenter()
+//        maven{
+//            url "https://bintray.com/mickeyzhoumiqi/architecture_zmq"
+//        }
     }
     dependencies {
         classpath 'com.android.tools.build:gradle:2.3.3'
-        classpath 'com.plugin.aop:aspectj:1.0.0'
+        classpath 'com.zmq.plugin:aspectj:1.0.0'
 
 
         // NOTE: Do not place your application dependencies here; they belong

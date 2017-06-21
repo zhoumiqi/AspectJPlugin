@@ -14,10 +14,10 @@ def licenseUrls = ['http://www.apache.org/licenses/LICENSE-2.0.txt']
 def inception = '2017'
 
 def username = 'zhoumiqi'
-
+//版本号,必填
 version = "1.0.0"
-
-group = "com.plugin.aop"
+//groupId,必填(一般填唯一的包名)
+group = "com.zmq.plugin"
 
 //.参考：http://blog.csdn.net/sbsujjbcy/article/details/50782830/
 // 更新版本执行 gradlew install , gradlew bintrayUpload
@@ -26,9 +26,11 @@ group = "com.plugin.aop"
 install {
     repositories {
         mavenInstaller {
+            // 生成 POM.xml with proper parameters
             pom.project {
-                // Description
+                //项目名称Description
                 name projectName
+                //项目描述
                 description mavenDesc
                 url siteUrl
 
@@ -37,7 +39,7 @@ install {
                 artifactId archivesBaseName
 //                version project.version
 
-                // License
+                // License软件开源协议，现在一般都是Apache License2.0
                 inceptionYear inception
                 licenses {
                     licenseNames.eachWithIndex { ln, li ->
@@ -47,6 +49,7 @@ install {
                         }
                     }
                 }
+                //开发者基本信息
                 developers {
                     developer {
                         name username
@@ -86,13 +89,13 @@ bintray {
     key = properties.getProperty("bintrayApiKey")
     configurations = ['archives']
     pkg {
-        repo = 'maven_zmq'
+        repo = 'architecture_zmq'
         name = projectName
         desc = mavenDesc
         websiteUrl = siteUrl
         issueTrackerUrl = issueUrl
         vcsUrl = gitUrl
-        labels = ['gradle', 'plugin', 'time']
+        labels = ['gradle', 'plugin', 'aspectj']
         licenses = licenseIds
         publish = true
         publicDownloadNumbers = true
