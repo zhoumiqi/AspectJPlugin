@@ -16,7 +16,7 @@ public class PermissionAspect {
 
     @Around("execution(@com.aop.aspectj.Permission * *(..)) && @annotation(permission)")
     public void aroundJoinPoint(final ProceedingJoinPoint joinPoint, Permission permission) throws Throwable {
-//        获取栈顶Activity(上下文)
+        //获取栈顶Activity(上下文)
         final Activity activity = BaseApp.getApp().getCurActivity();
         String[] permissions = permission.value();
         //申请permissions权限
